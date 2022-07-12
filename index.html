@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+    <title>Mabog National High School</title>   
+</head>
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #f2f3f4;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to right,
+    rgba(255, 255, 255, 1) 1%,
+    rgba(255, 255, 255, .8) 40%,
+    rgba(0, 0, 0, .0) 90%),
+    url(front.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.navbar-brand{
+    margin-top: 12px;
+    margin-left: 90px;
+}
+h1{
+    font-family: 'Libre Baskerville', serif;  
+    font-size: 22px;
+    margin-left: 96px;
+    position: absolute;
+    top: 50px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 1px;
+    position: relative;
+    margin-top: 22px;
+    padding-right: 50px;
+}
+.nav-links ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+}
+.nav-links ul li a:hover{
+    color:#2234A8;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #2234A8;
+    display: block;
+    margin: auto;
+    transition: 0.4s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+    height: 2px;
+}
+.text-box{
+    width:90%
+}
+.text-box h2{
+    font-size: 45px;
+    margin-left: 120px;
+    margin-top: 125px; 
+    font-weight: 630;
+}
+.text-box h3{
+    font-size: 45px;
+    margin-left: 120px;
+    margin-top: -6px;
+    color: #2234A8;
+    font-weight: 700;
+}
+.text-box h5{
+    font-size: 45px;
+    margin-left: 348px;
+    margin-top: -62px;
+    font-weight: 630;
+}
+.text-box h4{
+    font-size: 45px;
+    margin-left: 120px;
+    margin-top: -9px;
+    font-weight: 630;
+}
+.text-box p{
+    margin-top: 23px;
+    margin-left: 120px;
+    font-size: 16px;
+    font-weight: 450;
+}
+nav .fa{
+    display: none;
+}
+@media(max-width: 700px){
+    .text-box h2 {
+        font-size: 25px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: #2234A8;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -205px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa{
+        display: block;
+        color: black;
+        margin: 20px;
+        margin-right: 10px;
+        margin-top: 28px;
+        cursor: pointer;
+    }
+    .nav-links ul {
+        margin-top: -9px;
+        padding: 20px;
+    }
+    .header{
+        min-height: 65vh;
+        width: 100%;
+        background-image: linear-gradient(to right,
+        rgba(255, 255, 255, 1) 1%,
+        rgba(255, 255, 255, .8) 40%,
+        rgba(0, 0, 0, .0) 90%),
+        url(front.jpg);
+        background-position: center;
+        background-size: cover;
+        position: relative;
+    }
+    .header .navbar-brand{
+        margin-top: 12px;
+        margin-left: -6px;
+    }
+    .header .navbar-brand img{
+        width: 45px;
+        height: 38px;
+    }
+    h1{
+        margin-left: 50px;
+        font-size: 14px;
+        margin-top: -11px;
+    }
+    .text-box h2 {
+        margin-top: 95px;
+        margin-left: 15px;
+        font-size: 18px;
+    }
+    .text-box h3{
+        margin-left: 15px;
+        font-size: 18px;
+    }
+    .text-box h5{
+        margin-left: 107px;
+        font-size: 18px;
+        margin-top: -29px;;
+    }
+    .text-box h4{
+        margin-left: 15px;
+        font-size: 18px;
+        margin-top: -5px;
+    }
+    .text-box p{
+        margin-left: 15px;
+        margin-top: 1px;
+        font-size: 12px;
+        font-weight: 450;
+    }
+    .nav-links ul li a{
+        color: white;
+        font-size: 16px;
+        white-space: nowrap;
+    }
+}
+.news{
+    margin-top: 90px;
+    margin-left: 120px;
+}
+h6{
+    font-size: 28px;
+    margin-left: 7px;
+}
+.categ{
+    background-size: cover;
+    min-height: 60vh;
+    width: 58%;
+    margin-left: 2px;
+    margin-top: 40px;
+    background: white;   
+    text-align: left;
+}
+.card-tit{
+    padding-top: 15px;
+    margin-left: 21px;
+    font-size: 18px;
+    color: #4d4d4d;
+}
+.card-tex{
+   
+    margin-top: 30px;
+    color: #808081;
+    padding-bottom: 59px;
+    padding-right: 10px;
+}
+.announcements{
+    margin-top: -905px;
+    margin-left: 880px;
+    
+}
+h7{
+    font-size: 28px;
+    color: black;
+    font-weight: 900px;
+}
+.ann{
+    background-size: cover;
+    min-height: 65vh;
+    width: 78%;
+    margin-left: -6px;
+    margin-top: 37px;
+    background: white;   
+    text-align: left;
+}
+@media(max-width: 700px){
+    .news{
+        margin-top: 45px;
+        margin-left: 15px;
+    }
+    h6{
+        font-size: 16px;
+        margin-left: 2px;
+    }
+    .categ{
+        background-size: cover;
+        min-height: 60vh;
+        width: 98%;
+        margin-left: -4px;
+        margin-top: 22px;
+        background: white;   
+        text-align: left;
+    }
+    .card-tit{
+        padding-top: 15px;
+        margin-left: 12px;
+        font-size: 13px;
+        color: #4d4d4d;
+    }
+    .card-tex{
+   
+        margin-top: 30px;
+        color: #808081;
+        padding-bottom: 300px;
+        padding-right: 10px;
+    }
+    .announcements{
+        margin-top: 55px;
+        margin-left: 28px;
+    }
+    h7{
+        font-size: 16px;
+        margin-left: -5px;
+    }
+    .ann{
+        background-size: cover;
+        min-height: 60vh;
+        width: 100%;
+        margin-left: -14px;
+        margin-top: 22px;
+        background: white;   
+        text-align: left;
+    }
+}
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 24px 0;
+    background: #2234a8;
+    margin-top: 590px;
+ 
+}
+.footer h9{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 480;
+    color: white; 
+}
+@media(max-width: 700px){
+    .footer{
+        width: 360px;
+        padding: 14px 0;
+        margin-top: 450px;
+    }
+    .footer h9{
+        font-size: 12px;
+        margin-top: 200px;
+    }
+}
+
+</style>
+
+<body>
+    <section class="header">
+        <nav class="navbar navbar-light" style="background-color: white;">
+            <a class="navbar-brand" href="#">
+              <img src="maboglogo.png" width="85" height="75" class="d-inline-block align-top" alt="">
+              <h1>Mabog National High School</h1>
+            </a>
+            <div class="nav-links" id="navLinks"> 
+                <i class="fa fa-times" style="color:#fff" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="administration.html">Administration</a></li>
+                <li><a href="programoffered.html">Program Offered</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            </div>
+            <i class="fa fa-bars"  onclick="showMenu()"></i>
+          </nav>
+
+          <div class="text-box">
+              <h2>Built to serve and provide</h2>
+              <h3>education</h3>
+              <h5>to</h5>
+              <h4>the community</h4>
+              <p style="white-space: pre-line;">The home of organic agriculture. Enriching and empowering 
+                the learners in studies and curricular activities.</p> 
+          </div>
+    </section>
+
+    <!--News-->
+    <section class="news">
+        <h6>News</h6>
+        <div class="categ">
+            <h5 class="card-tit" style="white-space: pre-line;">Pagtatapos 2022: 7th Commencement Rites and 19th 
+                Moving Up Ceremony</h5>
+                <img src="291368005_5464250180291801_5106484094908556870_n.jpg" alt="grad" style="width: 200px; margin-left: 500px; margin-top: -20px;">
+            <p class="card-tex" style="white-space: pre-line; margin-left: 20px; margin-top: -88px; font-size: 15px;">Mabog National High School celebrates the wonderful milestone
+                 and achievements of students and parents last. Amid the pandemic 
+                 the school was able to held a face-to-face graduation with the
+                 accordance of the IATF Guidelines. 
+                </p>
+                <div class="dropdown-divider" style="margin-top: -45px;"></div>
+                <h5 class="card-tit">Princess Mae Bracho Receives Leadership Awardee</h5>
+                <img src="292011535_5471675046215981_3725914099435868571_n.jpg" alt="" style="width: 200px; margin-left: 500px; margin-top: -16px;">
+                <p class="card-tex" style="white-space: pre-line; margin-left: 20px; margin-top: -88px; padding-bottom: 10px; font-size: 15px;">SSG Student-Leader Princess Mae Bracho receives Leadership
+                Awardee during the 7th Commencement Rites at Mabog National 
+                High School Gym. Bracho has been a good leader and a good 
+                follower, a very responsible, focused, dedicated, goal-oriented,
+                 passionate, and a visionary leader.</p>
+                <div class="dropdown-divider"></div>
+                <h5 class="card-tit" style="white-space: pre-line;">MNHS bags Best Implementing School Medium 
+                    Category-Secondary Level</h5>
+                    <img src="award.jpg" alt="" style="width: 200px; margin-left: 500px; margin-top: 35px;">
+                <p class="card-tex" style="white-space: pre-line; margin-left: 20px; margin-top: -150px; padding-bottom: 70px; font-size: 15px;">Mabog National High School bags Best Implementing School 
+                    Medium Category- Secondary Level last June 20, 2022 at the 
+                    Iloilo Convention Center, Iloilo City, Philippines. The award was 
+                    received by the school head Leven Mart Lacuna, it serves as a 
+                    recognition for its exemplary contribution to improve the quality 
+                    of basic education by highlighting partnership engagements and 
+                    initiatives to support the Basic Education Learning Continuity Plan 
+                    through the 2021 Brigada Eskwela Program.
+                </p>
+          </div>
+    </section>
+    <!--Events-->
+    <section class="announcements">
+        <h7 style="font-weight: 600;">Announcements</h7>
+        <p></p>
+        <div class="ann">
+            
+        </div>
+    </section>
+
+    <!--Footer-->
+
+    <section class="footer">
+        <h9><i class="fa fa-copyright"></i>  2022 Mabog National High School</h9>
+    </section>
+<script>
+
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right ="-200px";
+    }
+</script>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html>

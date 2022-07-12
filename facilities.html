@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+    <link rel="stylesheet"type="text/css" href="css/lightbox.min.css">
+    <script type="text/javascript" src="js/lightbox-plus-jquery.min.js"></script>
+
+    <title>Mabog National High School</title>   
+</head>
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #f2f3f4;
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to right,
+    rgba(255, 255, 255, 1) 1%,
+    rgba(255, 255, 255, .8) 40%,
+    rgba(0, 0, 0, .0) 90%),
+    url(front.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.navbar-brand{
+    margin-top: 12px;
+    margin-left: 90px;
+}
+h1{
+    font-family: 'Libre Baskerville', serif;  
+    font-size: 22px;
+    margin-left: 96px;
+    position: absolute;
+    top: 50px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 1px;
+    position: relative;
+    margin-top: 22px;
+    padding-right: 50px;
+}
+.nav-links ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+}
+.nav-links ul li a:hover{
+    color:#2234A8;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #2234A8;
+    display: block;
+    margin: auto;
+    transition: 0.4s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+    height: 2px;
+}
+.text-box{
+    width:90%
+}
+.text-box h2{
+    font-size: 45px;
+    margin-left: 120px;
+    margin-top: 125px; 
+    font-weight: 630;
+}
+.text-box h3{
+    font-size: 45px;
+    margin-left: 120px;
+    margin-top: -6px;
+    color: #2234A8;
+    font-weight: 700;
+}
+.text-box h5{
+    font-size: 45px;
+    margin-left: 348px;
+    margin-top: -62px;
+    font-weight: 630;
+}
+.text-box h4{
+    font-size: 45px;
+    margin-left: 120px;
+    margin-top: -9px;
+    font-weight: 630;
+}
+.text-box p{
+    margin-top: 23px;
+    margin-left: 120px;
+    font-size: 16px;
+    font-weight: 450;
+}
+nav .fa{
+    display: none;
+}
+@media(max-width: 700px){
+    .text-box h2 {
+        font-size: 25px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: #2234A8;
+        height: 100vh;
+        width: 205px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa{
+        display: block;
+        color: black;
+        margin: 20px;
+        margin-right: 42px;
+        margin-top: 28px;
+        cursor: pointer;
+    }
+    .nav-links ul {
+        margin-top: -9px;
+        padding: 20px;
+    }
+    .header{
+        min-height: 65vh;
+        width: 100%;
+        background-image: linear-gradient(to right,
+        rgba(255, 255, 255, 1) 1%,
+        rgba(255, 255, 255, .8) 40%,
+        rgba(0, 0, 0, .0) 90%),
+        url(front.jpg);
+        background-position: center;
+        background-size: cover;
+        position: relative;
+    }
+    .header .navbar-brand{
+        margin-top: 12px;
+        margin-left: -6px;
+    }
+    .header .navbar-brand img{
+        width: 45px;
+        height: 38px;
+    }
+    h1{
+        margin-left: 50px;
+        font-size: 14px;
+        margin-top: -11px;
+    }
+    .text-box h2 {
+        margin-top: 95px;
+        margin-left: 15px;
+        font-size: 18px;
+    }
+    .text-box h3{
+        margin-left: 15px;
+        font-size: 18px;
+    }
+    .text-box h5{
+        margin-left: 107px;
+        font-size: 18px;
+        margin-top: -29px;;
+    }
+    .text-box h4{
+        margin-left: 15px;
+        font-size: 18px;
+        margin-top: -5px;
+    }
+    .text-box p{
+        margin-left: 15px;
+        margin-top: 1px;
+        font-size: 12px;
+        font-weight: 450;
+    }
+    .nav-links ul li a{
+        color: white;
+        font-size: 14px;
+    }
+}
+.news{
+    margin-top: 85px;
+    margin-left: 125px;
+}
+h6{
+    font-size: 28px;
+    height: 2px;
+    display: block;
+}
+
+.events{
+    margin-left: 880px;
+    margin-top: -235px;
+}
+.card{
+    background-color: #fff;
+    margin-top: 60px;
+    height: 150px;
+    border-style: none;
+    border-radius: 1px;
+}
+.card-title{
+    margin-top: 6px;
+    font-size: 18px;
+    margin-left: -10px;
+}
+.card-text{
+    margin-top: 20px;
+    font-size: 14px;
+    margin-left: -10px;
+}
+.cardi{
+    background: #fff;
+    box-sizing: border-box;
+    margin-top: 27px;
+    margin-left: -58px;
+    width: 440px;
+}
+h8{
+    font-size: 28px;
+    font-weight: 560;
+    margin-left: -60px;
+
+}
+ul li{
+    list-style-type: disc;
+    color: #0066ff;
+}
+@media(max-width: 700px){
+    .news{
+        margin-left: 18px;
+        margin-top: 38px;
+    }
+    h6{
+        font-size: 19px;
+    }
+    .card{
+        width: 300px;
+        height: 315px;
+        margin-left: -10px;
+        margin-top: 45px;
+    }
+    .card-title{
+        font-size: 15px;
+        margin-left: -10px;
+        margin-top: 120px;
+    }
+    .card-text{
+        margin-top: 23px;
+        font-size: 14px;
+        color: #555555;
+    }
+    .events{
+        margin-left: 78px;
+        margin-top: 38px;
+    }
+    h8{
+        font-size: 19px;
+    }
+    .cardi{
+        margin-top: 22px;
+        margin-left: -69px;
+        width: 300px;
+    }
+    .card-body{
+        font-size: 14px;
+    }
+}
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 24px 0;
+    background: #2234a8;
+    margin-top: 250px;
+}
+.footer h9{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 480;
+    color: white; 
+}
+@media(max-width: 700px){
+    .footer{
+        width: 325px;
+        padding: 14px 0;
+        margin-top: 100px;
+    }
+    .footer h9{
+        font-size: 12px;
+        margin-top: 90px;
+    }
+}
+.sub-header{
+    width: 100%;
+    background: #f2f3f4;
+    background-position: center;
+    background-size: cover;
+}
+nav fa{
+    display: none;
+}
+.about{
+    height: 100vh;
+    width: 100%;
+    background-color: #f2f3f4;
+}
+.vision{
+       
+        background-size: cover;
+        min-height: 100vh;
+        width: 83%;
+        margin-left: 118px;
+        margin-top: 95px;
+        background: white;   
+        text-align: left;
+}
+.card-tit{
+    padding-top: 35px;
+    margin-left: 22px;
+    font-size: 22px;
+    color: black;
+}
+.card-tex{
+    margin-left: 24px;
+    margin-top: 28px;
+    color: #808081;
+    padding-bottom: 30px;
+    padding-right: 10px;
+}
+@media(max-width: 700px){
+    .subheader{
+        margin-left: 2px;
+    }
+    .subheader .navbar-brand{
+       
+        margin-top: 12px;
+        margin-left: -6px;
+    }
+    .subheader .navbar-brand img{
+        width: 45px;
+        height: 38px;
+    }
+    h1{
+       font-size: 14px; 
+    }
+    .nav-links{
+        position: absolute;
+        background: #2234A8;
+        height: 100vh;
+        width: 205px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa{
+        display: block;
+        color: black;
+        margin: 20px;
+        margin-right: 30px;
+        margin-top: 28px;
+        cursor: pointer;
+    }
+    .nav-links ul {
+        margin-top: -9px;
+        padding: 20px;
+    }
+    .nav-links ul li a{
+        color: white;
+        font-size: 14px;
+    }
+    .vision{
+        width: 308px;
+        margin-left:11px;
+        margin-top: 55px;
+    }
+    .card-tit{
+        font-size: 16px;
+    }
+    .card-tex{
+        font-size: 14px;
+    
+    }
+}
+.supheader{
+    width: 100%;
+    background: #f2f3f4;
+    background-position: center;
+    background-size: cover;
+}
+.container{
+    margin-top: 90px;
+    margin-left: 118px;
+    background: white;
+    padding: 42px;
+    padding-top: 85px;
+    padding-bottom: 20px;
+    margin-bottom: 58px;
+}
+.course{
+        height: 90vh;
+        width: 1348px;
+        margin-top: -2px;
+        margin-left: 1px;
+        background: #fff;
+        padding: 42px;
+        padding-top: 85px;
+        
+}
+.cap{
+    margin-top: -278px;
+    margin-left: 680px;
+}
+h13{
+    font-size: 26px;
+    font-weight: 500;
+}
+.cont{
+        height: 232vh;
+        width: 1170px;
+        margin-top: 88px;
+        margin-left: 100px;
+        background: #fff;
+        padding: 42px;
+        padding-top: 85px;
+        margin-bottom: 55px;
+}
+.gal{
+    margin-top: -28px;
+}
+h14{
+    font-size: 26px;
+}
+.gallery{
+
+    margin: 10px 50px;
+}
+.gallery img{
+    margin-left: 11px;
+    width: 230px;
+    padding: 5px;
+    margin-top: 10px;
+    
+}
+</style>
+
+<body>
+    <section class="superheader">
+        <nav class="navbar navbar-light" style="background-color: white">
+            <a class="navbar-brand" href="#">
+              <img src="maboglogo.png" width="85" height="75" class="d-inline-block align-top" alt="">
+              <h1>Mabog National High School</h1>
+            </a>
+            <div class="nav-links" id="navLinks"> 
+                <i class="fa fa-times" style="color:#fff" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="administration.html">Administration</a></li>
+                <li><a href="programoffered.html">Program Offered</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            </div>
+            <i class="fa fa-bars"  onclick="showMenu()"></i>
+          </nav>
+    </section>
+
+    <div class="cont">
+        <div class="gal">
+            <h14>Our Gallery</h14>
+            <div class="dropdown-divider" style="margin-top: 22px; margin-bottom: 55px;"></div>
+            <div class="gallery">
+            <a href="first.jpg" data-lightbox="ourgallery"><img src="first.jpg" alt=""></a>
+            <a href="second.jpg" data-lightbox="ourgallery"></s><img src="second.jpg" alt=""></a>
+            <a href="third.jpg" data-lightbox="ourgallery"><img src="third.jpg" alt=""></a>
+            <a href="fourth.jpg" data-lightbox="ourgallery"><img src="fourth.jpg" alt=""></a>
+            <a href="fifth.jpg" data-lightbox="ourgallery"><img src="fifth.jpg" alt=""></a>
+            <a href="six.jpg" data-lightbox="ourgallery"><img src="six.jpg" alt=""></a>
+            <a href="seven.jpg" data-lightbox="ourgallery"><img src="seven.jpg" alt=""></a>
+            <a href="eight.jpg" data-lightbox="ourgallery"><img src="eight.jpg" alt=""></a>
+            <a href="nine.jpg" data-lightbox="ourgallery"><img src="nine.jpg" alt=""></a>
+            <a href="tenth.jpg" data-lightbox="ourgallery"><img src="tenth.jpg" alt=""></a>
+            <a href="eleven.jpg" data-lightbox="ourgallery"><img src="eleven.jpg" alt=""></a>
+            <a href="twelve.jpg" data-lightbox="ourgallery"><img src="twelve.jpg" alt=""></a>
+            <a href="thirteen.jpg" data-lightbox="ourgallery"><img src="thirteen.jpg" alt=""></a>
+            <a href="fourteen.jpg" data-lightbox="ourgallery"><img src="fourteen.jpg" alt=""></a>
+            <a href="fifteen.jpg" data-lightbox="ourgallery"><img src="fifteen.jpg" alt=""></a>
+            <a href="sixteen.jpg" data-lightbox="ourgallery"><img src="sixteen.jpg" alt=""></a>
+            <a href="seventeen.jpg" data-lightbox="ourgallery"><img src="seventeen.jpg" alt=""></a>
+            <a href="eighteen.jpg" data-lightbox="ourgallery"><img src="eighteen.jpg" alt=""></a>
+            <a href="nineteen.jpg" data-lightbox="ourgallery"><img src="nineteen.jpg" alt=""></a>
+            <a href="twenty.jpg" data-lightbox="ourgallery"><img src="twenty.jpg" alt=""></a>
+            <a href="twentyone.jpg" data-lightbox="ourgallery"><img src="twentyone.jpg" alt=""></a>
+            <a href="twentytwo.jpg" data-lightbox="ourgallery"><img src="twentytwo.jpg" alt=""></a>
+            <a href="addone.jpg" data-lightbox="ourgallery"><img src="addone.jpg" alt=""></a>
+            <a href="addtwo.jpg" data-lightbox="ourgallery"><img src="addtwo.jpg" alt=""></a>
+        </div>
+        </div>
+    </div>
+      
+<script>
+
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right ="-200px";
+    }
+</script>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</html>
